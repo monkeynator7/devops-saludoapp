@@ -9,11 +9,10 @@ pipeline {
     stages {
         stage('Clonar') {
             steps {
-                git
-                'https://github.com/monkeynator7/devops-saludoapp.git'
+                git url: 'https://github.com/monkeynator7/devops-saludoapp.git'
             }
         }
-    
+
         stage('Compilar') {
             steps {
                 sh 'mvn clean compile'
@@ -32,11 +31,11 @@ pipeline {
             }
         }
     }
+
     post {
         success {
             echo 'El build fue exitoso!'
         }
-
         failure {
             echo 'El build falló.'
         }
