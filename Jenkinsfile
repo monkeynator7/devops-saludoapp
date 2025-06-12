@@ -7,11 +7,11 @@ pipeline {
     }
 
     stages {
-        stage('Clonar') {
-            steps {
-                git url: 'https://github.com/monkeynator7/devops-saludoapp.git'
-            }
-        }
+        // stage('Clonar') {
+        //     steps {
+        //         git branch: 'main', url: 'https://github.com/monkeynator7/devops-saludoapp.git'
+        //     }
+        // }
 
         stage('Compilar') {
             steps {
